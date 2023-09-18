@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'obx/obx.dart';
-import 'obx/getbuilder.dart';
-import 'obx/sum/mainsum.dart';
-
 class ObxGetBuilderMenu extends StatelessWidget {
   const ObxGetBuilderMenu({Key? key}) : super(key: key);
 
@@ -21,7 +17,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Get.to(const ObxPage());
+                Get.toNamed("/obx/obx");
               },
               child: Container(
                 height: 70,
@@ -42,7 +38,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
             const SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                Get.to(const GetBuilderPage());
+                Get.toNamed("/obx/getbuilder");
               },
               child: Container(
                 height: 70,
@@ -63,7 +59,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
             const SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                Get.to(const MainSumPage());
+                Get.toNamed("/obx/sum");
               },
               child: Container(
                 height: 70,

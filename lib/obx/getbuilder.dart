@@ -8,6 +8,7 @@ class GetBuilderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(TapController());
     return Scaffold(
       appBar: AppBar(
         title: const Text("Get Builder"),
@@ -32,7 +33,8 @@ class GetBuilderPage extends StatelessWidget {
                         style:
                             const TextStyle(color: Colors.white, fontSize: 20),
                       )
-                    ]),
+                    ]
+                ),
               ),
               const SizedBox(height: 10),
               GestureDetector(

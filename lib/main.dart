@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'package:get/get.dart';
 
+import 'package:smekdu_getx/routes.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,8 +15,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(body: SafeArea(child: HomePage())));
+        getPages: router,
+    );
   }
 }

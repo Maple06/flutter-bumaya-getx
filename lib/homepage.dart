@@ -1,8 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:get/get.dart';
 
-import 'obxgetbuilder.dart';
-import 'snackdialogbottom.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -28,7 +26,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Get.to(const ObxGetBuilderMenu());
+                          Get.toNamed("/obx");
                         },
                         child: Container(
                           decoration: const BoxDecoration(
@@ -53,7 +51,7 @@ class HomePage extends StatelessWidget {
                         ),
                         child: GestureDetector(
                           onTap: () {
-                            Get.to(const SnackDialogBottomPage());
+                            Get.toNamed("/snack");
                           },
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,

@@ -3,13 +3,12 @@ import 'package:get/get.dart';
 
 import 'package:smekdu_getx/controllers/sum_controller.dart';
 
-import 'sumdisimpan.dart';
-
 class MainSumPage extends StatelessWidget {
   const MainSumPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Get.put(SumController());
     return Scaffold(
         appBar: AppBar(title: const Text("Sum X + Y"), centerTitle: true),
         body: GetBuilder<SumController>(builder: (sumController) {
@@ -183,7 +182,7 @@ class MainSumPage extends StatelessWidget {
                       const SizedBox(width: 5),
                       InkWell(
                         onTap: () {
-                          Get.to(const SavedSumPage());
+                          Get.toNamed("/obx/sum/saved");
                         },
                         child: Ink(
                           width: MediaQuery.of(context).size.width / 2 - 25,

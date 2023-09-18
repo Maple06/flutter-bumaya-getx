@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smekdu_getx/snack/textfield.dart';
 
 import 'controllers/textfield_controller.dart';
 
@@ -63,10 +62,9 @@ class SnackDialogBottomPage extends StatelessWidget {
                             style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
                                   Colors.white),
-                              // Remove background color to white
                               side: MaterialStateProperty.all<BorderSide>(
                                 const BorderSide(
-                                    color: Colors.redAccent), // Add blue border
+                                    color: Colors.redAccent),
                               ),
                               foregroundColor: MaterialStateProperty.all<Color>(
                                   Colors.redAccent),
@@ -92,8 +90,8 @@ class SnackDialogBottomPage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(
-                      const TextFieldPage(),
+                    Get.toNamed(
+                      "/snack/saved",
                       arguments: textFieldController.names,
                     );
                   },
@@ -128,6 +126,36 @@ class SnackDialogBottomPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+                ElevatedButton(
+                    onPressed: (){
+                      showModalBottomSheet(
+                        context: context,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25)
+                        ),
+                        builder: (BuildContext context) {
+                          return SizedBox(
+                            height: 200,
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ElevatedButton(
+                                      onPressed: (){
+                                        Get.toNamed("/snack/counter");
+                                      },
+                                      child: Text("Pergi ke Page +/-")
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: Text("Show +/- BottomSheet")
                 )
               ],
             )));

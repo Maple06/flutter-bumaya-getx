@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 class TextFieldController extends GetxController {
   RxList names = [].obs;
   RxBool switchValue = false.obs;
-  RxString switchTextValue = "Open".obs;
+  RxString switchTextValue = "Closed".obs;
+  RxInt counter = 0.obs;
 
   TextEditingController controller = TextEditingController();
 
