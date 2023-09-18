@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 
 class SumController extends GetxController{
-  RxInt _x = 0.obs;
+  final RxInt _x = 0.obs;
   RxInt get x => _x;
-  RxInt _y = 0.obs;
+  final RxInt _y = 0.obs;
   RxInt get y => _y;
-  RxInt _sum = 0.obs;
+  final RxInt _sum = 0.obs;
   RxInt get sum => _sum;
 
   RxList listHasil = [].obs;

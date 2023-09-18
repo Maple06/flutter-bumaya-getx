@@ -10,9 +10,8 @@ class MainSumPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SumController sumController = Get.put(SumController());
     return Scaffold(
-        appBar: AppBar(title: Text("Sum X + Y"), centerTitle: true),
+        appBar: AppBar(title: const Text("Sum X + Y"), centerTitle: true),
         body: GetBuilder<SumController>(builder: (sumController) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
@@ -29,11 +28,12 @@ class MainSumPage extends StatelessWidget {
                       children: [
                         Text(
                           "X: ${sumController.x.toString()}",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 20),
                         )
                       ]),
                 ),
-                SizedBox(height: 3),
+                const SizedBox(height: 3),
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Row(
@@ -49,10 +49,10 @@ class MainSumPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(5)),
-                          child: Center(child: Text("+")),
+                          child: const Center(child: Text("+")),
                         ),
                       ),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       InkWell(
                         onTap: () {
                           sumController.decrementX();
@@ -63,28 +63,29 @@ class MainSumPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(5)),
-                          child: Center(child: Text("-")),
+                          child: const Center(child: Text("-")),
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
-                    height: 70,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                        color: Colors.orangeAccent,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Y: ${sumController.y.toString()}",
-                            style: TextStyle(color: Colors.white, fontSize: 20),
-                          )
-                        ]),
-                  ),
+                  height: 70,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.orangeAccent,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Y: ${sumController.y.toString()}",
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 20),
+                        )
+                      ]),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Row(
@@ -100,10 +101,10 @@ class MainSumPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(5)),
-                          child: Center(child: Text("+")),
+                          child: const Center(child: Text("+")),
                         ),
                       ),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       InkWell(
                         onTap: () {
                           sumController.decrementY();
@@ -114,13 +115,13 @@ class MainSumPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(5)),
-                          child: Center(child: Text("-")),
+                          child: const Center(child: Text("-")),
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 InkWell(
                   onTap: () {
                     sumController.hasil();
@@ -133,7 +134,7 @@ class MainSumPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10)),
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text(
                             "Sum!",
                             style: TextStyle(color: Colors.white, fontSize: 20),
@@ -141,7 +142,7 @@ class MainSumPage extends StatelessWidget {
                         ]),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
                   height: 70,
                   width: MediaQuery.of(context).size.width,
@@ -153,7 +154,8 @@ class MainSumPage extends StatelessWidget {
                       children: [
                         Text(
                           "Hasil: ${sumController.sum}",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 20),
                         )
                       ]),
                 ),
@@ -173,15 +175,15 @@ class MainSumPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.deepOrange,
                               borderRadius: BorderRadius.circular(5)),
-                          child: Center(
+                          child: const Center(
                               child: Text("Save Result",
                                   style: TextStyle(color: Colors.white))),
                         ),
                       ),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       InkWell(
                         onTap: () {
-                          Get.to(SavedSumPage());
+                          Get.to(const SavedSumPage());
                         },
                         child: Ink(
                           width: MediaQuery.of(context).size.width / 2 - 25,
@@ -189,7 +191,7 @@ class MainSumPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.deepOrange,
                               borderRadius: BorderRadius.circular(5)),
-                          child: Center(
+                          child: const Center(
                               child: Text("Saved Equations",
                                   style: TextStyle(color: Colors.white))),
                         ),
@@ -197,7 +199,7 @@ class MainSumPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Center(child: Text(sumController.pesan.toString())),
               ],
             ),

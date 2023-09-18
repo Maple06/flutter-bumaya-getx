@@ -8,10 +8,9 @@ class GetBuilderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TapController tapController = Get.put(TapController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Get Builder"),
+        title: const Text("Get Builder"),
         centerTitle: true,
       ),
       body: Padding(
@@ -30,11 +29,12 @@ class GetBuilderPage extends StatelessWidget {
                     children: [
                       Text(
                         tapController.x.toString(),
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 20),
                       )
                     ]),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
                   tapController.increment();
@@ -47,7 +47,7 @@ class GetBuilderPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           "Increase",
                           style: TextStyle(color: Colors.white, fontSize: 20),
@@ -55,7 +55,7 @@ class GetBuilderPage extends StatelessWidget {
                       ]),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
                   tapController.decrement();
@@ -68,7 +68,7 @@ class GetBuilderPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Text(
                           "Decrease",
                           style: TextStyle(color: Colors.white, fontSize: 20),

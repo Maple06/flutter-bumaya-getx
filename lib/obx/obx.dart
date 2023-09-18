@@ -9,7 +9,7 @@ class ObxPage extends StatelessWidget {
     RxString nama = "***********".obs;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Obx"),
+        title: const Text("Obx"),
         centerTitle: true,
       ),
       body: Padding(
@@ -26,12 +26,13 @@ class ObxPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Obx(() => Text("$nama",
-                        style: TextStyle(color: Colors.white, fontSize: 20))),
+                        style: const TextStyle(
+                            color: Colors.white, fontSize: 20))),
                   ]),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 nama.value = "Malendra S Rizky";
               },
               child: Container(
@@ -42,7 +43,7 @@ class ObxPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text("Show Name!",
                           style: TextStyle(color: Colors.white, fontSize: 20)),
                     ]),

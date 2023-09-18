@@ -12,7 +12,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Option Page I"),
+        title: const Text("Option Page I"),
         centerTitle: true,
       ),
       body: Padding(
@@ -21,7 +21,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Get.to(ObxPage());
+                Get.to(const ObxPage());
               },
               child: Container(
                 height: 70,
@@ -31,7 +31,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Obx",
                         style: TextStyle(color: Colors.white, fontSize: 20),
@@ -39,10 +39,10 @@ class ObxGetBuilderMenu extends StatelessWidget {
                     ]),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                Get.to(GetBuilderPage());
+                Get.to(const GetBuilderPage());
               },
               child: Container(
                 height: 70,
@@ -52,7 +52,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Get Builder",
                         style: TextStyle(color: Colors.white, fontSize: 20),
@@ -60,10 +60,10 @@ class ObxGetBuilderMenu extends StatelessWidget {
                     ]),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                Get.to(MainSumPage());
+                Get.to(const MainSumPage());
               },
               child: Container(
                 height: 70,
@@ -73,7 +73,7 @@ class ObxGetBuilderMenu extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Sum X + Y",
                         style: TextStyle(color: Colors.white, fontSize: 20),

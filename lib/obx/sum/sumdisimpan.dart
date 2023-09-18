@@ -11,7 +11,8 @@ class SavedSumPage extends StatelessWidget {
     SumController sumController = Get.put(SumController());
     RxList listHasil = sumController.listHasil;
     return Scaffold(
-      appBar: AppBar(title: Text("Persamaan Tersimpan"), centerTitle: true),
+      appBar:
+          AppBar(title: const Text("Persamaan Tersimpan"), centerTitle: true),
       body: GetBuilder<SumController>(builder: (sumController) {
         return ListView.builder(
           itemCount: listHasil.length,
@@ -27,7 +28,7 @@ class SavedSumPage extends StatelessWidget {
                   tileColor: Colors.blue,
                   leading: Text(
                     '$shownIndex.',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
                     ),
@@ -35,7 +36,7 @@ class SavedSumPage extends StatelessWidget {
                   title: Center(
                     child: Text(
                       '$x + $y = $sum',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
